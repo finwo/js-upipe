@@ -1,10 +1,9 @@
 var batch = require('./lib/batch'),
-    EE    = require('./lib/ee'),
-    u     = undefined;
+    EE    = require('./lib/ee');
 
 function process(context) {
   if (!context.queue.length) return;
-  batch(context, context.transform || context.emit.bind(u, 'data'), context.queue);
+  batch(context, context.transform || context.emit.bind(undefined, 'data'), context.queue);
   context.queue = [];
 }
 
@@ -44,7 +43,7 @@ var proto = {
 
 var upipe = module.exports = function(data) {
   var out = EE(Object.create(proto));
-  setTimeout(process.bind(u,out),0);
+  setTimeout(process.bind(undefined,out),0);
   out.on('end', function() {
     if(!this.finished) {
       this.write(null);
