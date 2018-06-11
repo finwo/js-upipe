@@ -1,0 +1,22 @@
+{
+  "name": "upipe",
+  "version": "0.0.1",
+  "description": "Tiny transforming pipe library",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finwo/js-upipe.git"
+  },
+  "author": "Robin Bron <robin@finwo.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/finwo/js-upipe/issues"
+  },
+  "homepage": "https://github.com/finwo/js-upipe#readme"
+}
