@@ -4,8 +4,7 @@
   "description": "Tiny transforming pipe library",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'No test was specified!'",
-    "build": "bash scripts/build.sh"
+    "test": "echo 'No test was specified!'"
   },
   "repository": {
     "type": "git",

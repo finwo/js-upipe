@@ -1,1 +1,3 @@
     "test": "DEBUG=1 node_modules/.bin/nyc node_modules/.bin/serial-mocha test/* --sort | tee test-output.txt && ./node_modules/.bin/nyc report --reporter=clover && ! grep -q -oP \"\\d+\\sfailing\" test-output.txt && rm test-output.txt || { echo \"Test output is located in 'test-output.txt'\" ; exit 1 ; }",
+
+    "build": "bash scripts/build.sh"
