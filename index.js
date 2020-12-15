@@ -57,7 +57,7 @@ var upipe = module.exports = (function() {
       }
     });
     if ( 'function' === typeof dat ) {
-      out.t = dat;
+      out.t = dat.bind(out);
     } else if ( 'undefined' !== typeof dat ) {
       if (Array.isArray(dat)) {
         out.q.push.apply(out.q,dat);
